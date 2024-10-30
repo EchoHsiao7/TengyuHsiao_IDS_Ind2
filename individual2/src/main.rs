@@ -1,5 +1,5 @@
-use rusqlite::{params, Connection, Result};
 use rand::Rng;
+use rusqlite::{params, Connection, Result};
 use std::io::{self, Write};
 
 #[derive(Debug)]
@@ -9,10 +9,7 @@ struct User {
 }
 
 fn create_user(conn: &Connection, name: &str) -> Result<usize> {
-    conn.execute(
-        "INSERT INTO user (name) VALUES (?1)",
-        params![name],
-    )
+    conn.execute("INSERT INTO user (name) VALUES (?1)", params![name])
 }
 
 fn read_user(conn: &Connection, id: i32) -> Result<User> {
@@ -30,23 +27,17 @@ fn read_user(conn: &Connection, id: i32) -> Result<User> {
 }
 
 fn update_user(conn: &Connection, id: i32, name: &str) -> Result<usize> {
-    conn.execute(
-        "UPDATE user SET name = ?1 WHERE id = ?2",
-        params![name, id],
-    )
+    conn.execute("UPDATE user SET name = ?1 WHERE id = ?2", params![name, id])
 }
 
 fn delete_user(conn: &Connection, id: i32) -> Result<usize> {
-    conn.execute(
-        "DELETE FROM user WHERE id = ?1",
-        params![id],
-    )
+    conn.execute("DELETE FROM user WHERE id = ?1", params![id])
 }
 
 fn main() -> Result<()> {
     let conn = Connection::open("users.db")?;
 
-    // Create 
+    // Create
     conn.execute(
         "CREATE TABLE IF NOT EXISTS user (
             id      INTEGER PRIMARY KEY,

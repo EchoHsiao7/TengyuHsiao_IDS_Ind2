@@ -23,18 +23,23 @@ jobs:
       uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
+        components: clippy, rustfmt
         override: true
 
     - name: Check
-      run: make check
+      run: cargo check
       working-directory: ${{ env.WORKING_DIR }}
 
     - name: Format
-      run: make format
+      run: cargo fmt
+      working-directory: ${{ env.WORKING_DIR }}
+    
+    - name: Lint 
+      run: cargo clippy 
       working-directory: ${{ env.WORKING_DIR }}
 
     - name: Test
-      run: make test
+      run: cargo test
       working-directory: ${{ env.WORKING_DIR }}
 
     - name: Release
@@ -45,4 +50,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: release-binary
-        path: ${{ env.WORKING_DIR }}/target/release/main
+        path: ${{ env.WORKING_DIR }}/target/release/individual2
