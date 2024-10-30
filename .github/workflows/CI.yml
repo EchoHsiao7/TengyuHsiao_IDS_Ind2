@@ -43,7 +43,7 @@ jobs:
       working-directory: ${{ env.WORKING_DIR }}
 
     - name: Release
-      run: make release
+      run: cargo build --release
       working-directory: ${{ env.WORKING_DIR }}
 
     - name: Upload Binary Artifact
