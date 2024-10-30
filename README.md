@@ -1,6 +1,7 @@
+[![CI](https://github.com/EchoHsiao7/TengyuHsiao_IDS_Ind2/actions/workflows/CI.yml/badge.svg)](https://github.com/EchoHsiao7/TengyuHsiao_IDS_Ind2/actions/workflows/CI.yml)
 # TengyuHsiao_IDS_Individual2
 
-# Rust SQLite CRUD Application
+## Rust SQLite CRUD Application
 
 This project is a simple Rust application that demonstrates basic CRUD (Create, Read, Update, Delete) operations using a SQLite database. The program prompts the user to enter a user ID and name, then randomly performs one of the CRUD operations and displays the result.
 
