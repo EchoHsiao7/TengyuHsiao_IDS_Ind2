@@ -44,3 +44,11 @@ This project is a simple Rust application that demonstrates basic CRUD (Create, 
 
 The following is a example of running the binary file:
 ![alt text](image-1.png)
+
+## Use of Github Colab:
+
+ Copilot assisted in generating boilerplate code for setting up the SQLite database and CRUD operations, which saved time and reduced the likelihood of syntax errors. It also offered valuable insights into Rust's ownership and borrowing mechanics, helping me write more efficient and idiomatic Rust code. 
+
+## Youtube video link:
+
+https://youtu.be/7PzK5vuyMiA
