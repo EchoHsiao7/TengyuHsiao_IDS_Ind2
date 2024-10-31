@@ -35,3 +35,12 @@ This project is a simple Rust application that demonstrates basic CRUD (Create, 
    ```bash
    cargo run --release
 
+5.  **Run the project using the binary** 
+
+    You can download the binary file and run it under the summary of the github action. In addition, the binary file is under my individual2 folder and you can run it.
+
+     ```bash
+     ./target/release/individual2
+
+The following is a example of running the binary file:
+![alt text](image-1.png)
